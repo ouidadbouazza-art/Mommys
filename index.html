@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maternité &amp; Sérénité à Oujda — الأمومة والطمأنينة بوجدة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF4EC;--card:#FFFFFF;--ink:#4A2E3A;--mut:#7A6068;--pri:#A94F65;--priInk:#FFFFFF;--soft:#F6DDD8;--sage:#DDE8DC;--line:#EBD9D2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A1E24;--card:#3A2830;--ink:#F6E9E4;--mut:#CDB5B8;--pri:#E58FA1;--priInk:#2A1E24;--soft:#4D3540;--sage:#2F3D33;--line:#58404A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2A1E24;--card:#3A2830;--ink:#F6E9E4;--mut:#CDB5B8;--pri:#E58FA1;--priInk:#2A1E24;--soft:#4D3540;--sage:#2F3D33;--line:#58404A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);background-image:radial-gradient(circle at 0% 0%,var(--soft),transparent 45%),radial-gradient(circle at 100% 100%,var(--sage),transparent 45%);background-attachment:fixed;color:var(--ink);font-family:Nunito,Tajawal,"Segoe UI",system-ui,sans-serif;line-height:1.65;min-height:100vh}
+html[lang="ar"] body{font-family:Tajawal,Nunito,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:18px 16px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:var(--mut);font-size:.95rem}
+.lang{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;font:inherit;font-weight:700;cursor:pointer}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;background:var(--pri);border-radius:99px;transition:width .4s ease}
+.card{background:var(--card);border-radius:26px;padding:24px 20px;box-shadow:0 10px 30px rgba(120,70,80,.10)}
+@media (prefers-reduced-motion:no-preference){.card{animation:in .45s ease}@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+h1{font-size:1.55rem;line-height:1.3;margin:.2em 0 .4em}
+h2{font-size:1.25rem;line-height:1.4;margin:.1em 0 .3em}
+p{margin:.4em 0}.mut{color:var(--mut);font-size:.95rem}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:start;padding:14px 16px;margin:10px 0;border:2px solid var(--line);border-radius:18px;background:var(--card);color:inherit;font:inherit;cursor:pointer;min-height:54px}
+.opt:hover{border-color:var(--pri)}
+.opt[aria-pressed="true"]{border-color:var(--pri);background:var(--soft)}
+.dot{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:.85rem;color:var(--priInk)}
+.sq{border-radius:8px}
+.opt[aria-pressed="true"] .dot{background:var(--pri);border-color:var(--pri)}
+.row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.btn{flex:1;min-width:130px;border:0;border-radius:999px;padding:14px 22px;font:inherit;font-weight:700;font-size:1.02rem;cursor:pointer;background:var(--pri);color:var(--priInk);text-align:center;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+textarea,input[type=text],input[type=tel]{width:100%;font:inherit;color:inherit;background:var(--bg);border:2px solid var(--line);border-radius:16px;padding:12px 14px;margin-top:6px}
+textarea{min-height:110px;resize:vertical}
+textarea:focus,input:focus,.opt:focus-visible,.btn:focus-visible,.lang:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.chips .opt{width:auto;margin:0;padding:8px 14px;min-height:44px}
+.box{background:var(--soft);border-radius:18px;padding:14px 16px;margin-top:16px}
+.sum{white-space:pre-wrap;font-size:.92rem;background:var(--bg);border-radius:14px;padding:12px;margin-top:10px;max-height:220px;overflow:auto}
+.warn{color:var(--pri);font-weight:700;font-size:.92rem}
+.ok{color:#2E6B46;font-weight:700;font-size:.95rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ok{color:#8CE0AE}}
+label.lab{display:block;font-weight:700;margin-top:14px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.pills span{background:var(--soft);border-radius:99px;padding:4px 12px;font-size:.85rem}.intro{background:var(--soft);border-radius:18px;padding:14px 16px;margin-top:14px;font-size:.95rem}.badge{font-size:.9rem;color:var(--pri);font-weight:700}
+.box ul{margin:8px 0;padding-inline-start:20px}.box li{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span id="brand">Mommy’s · متعة الأمومة</span><button class="lang" id="lang" type="button">العربية</button></div>
+  <div class="bar" aria-hidden="true"><i id="prog" style="width:0"></i></div>
+  <main id="app" aria-live="polite"></main>
+</div>
+<script>
+const FORMSPREE_ENDPOINT="https://formspree.io/f/mnpdowpd";
+const PROJECT="Mommy’s متعة الأمومة",KEEP={fr:"31 janvier 2027",ar:"31 يناير 2027"};
+const D={
+  "fr":{
+    "badge":"🌸 Mommy’s prépare un accompagnement pour les mamans d’Oujda",
+    "h1":"Vivre sa maternité sans s’oublier",
+    "hero_p":"Un accompagnement à chaque étape, pour avancer avec confiance, repères et sérénité.",
+    "pill_1":"⏱️ Environ 3 à 4 minutes",
+    "pill_2":"🔒 Réponses confidentielles",
+    "pill_3":"🤍 Approche non médicale",
+    "intro_title":"Vous êtes enceinte ou maman à Oujda ?",
+    "intro_text":"Dites-nous ce qui vous aiderait vraiment. Mommy’s imagine un accompagnement humain et pratique à Oujda (hors suivi médical).",
+    "hint_2":"Choisissez jusqu’à 2 réponses",
+    "hint_3":"Choisissez jusqu’à 3 réponses",
+    "q1_t":"Quelle est votre situation actuelle ?",
+    "q1_o1":"Enceinte (1er trimestre : 1 à 3 mois)",
+    "q1_o2":"Enceinte (2e trimestre : 4 à 6 mois)",
+    "q1_o3":"Enceinte (3e trimestre : 7 à 9 mois)",
+    "q1_o4":"Jeune maman (bébé de moins de 6 mois)",
+    "q1_o5":"Maman d’un jeune enfant (bébé de 6 mois à 2 ans)",
+    "q2_t":"Est-ce votre premier enfant ?",
+    "q2_o1":"Oui",
+    "q2_o2":"Non",
+    "q3_t":"Quelle est votre situation professionnelle ?",
+    "q3_o1":"Salariée (secteur privé)",
+    "q3_o2":"Fonctionnaire / Secteur public",
+    "q3_o3":"Indépendante / Profession libérale",
+    "q3_o4":"En congé maternité actuellement",
+    "q3_o5":"Sans activité professionnelle actuellement",
+    "q4_t":"Comment vous sentez-vous en ce moment ?",
+    "q4_o1":"Très difficile",
+    "q4_o2":"Plutôt difficile",
+    "q4_o3":"Ça va, avec des hauts et des bas",
+    "q4_o4":"Plutôt bien",
+    "q4_o5":"Sereine",
+    "q5_t":"En dehors du suivi médical, quels sont vos 3 plus grands défis actuels ?",
+    "q5_o1":"Gérer la fatigue et le rythme quotidien (grossesse ou bébé)",
+    "q5_o2":"Préparer sereinement la reprise du travail et l’organisation familiale",
+    "q5_o3":"Alléger ma charge mentale et mieux gérer mon temps",
+    "q5_o4":"Gérer mon stress, mes émotions et prendre du temps pour moi",
+    "q5_o5":"Mieux communiquer et impliquer mon conjoint / entourage",
+    "q5_o6":"Trouver des repères pratiques sur le quotidien de bébé (sommeil, rythme)",
+    "q6_t":"Avez-vous un espace où parler librement de ce que vous vivez ?",
+    "q6_o1":"Oui, j’ai des personnes et des lieux pour ça",
+    "q6_o2":"Un peu, mais pas assez",
+    "q6_o3":"Rarement",
+    "q6_o4":"Non, pas vraiment",
+    "q7_t":"Quel type d’accompagnement vous aiderait le plus ?",
+    "q7_o1":"Accompagnement émotionnel et mental (confiance, stress, écoute)",
+    "q7_o2":"Coaching pratique et organisationnel (arrivée de bébé, maison, reprise)",
+    "q7_o3":"Ateliers d’échange en petit groupe entre mamans à Oujda",
+    "q7_o4":"Séances individuelles personnalisées ou en duo avec le conjoint",
+    "q8_t":"Quel format et quels créneaux vous conviendraient le mieux ?",
+    "q8_o1":"En présentiel à Oujda — en semaine (fin de journée / pause)",
+    "q8_o2":"En présentiel à Oujda — le week-end (samedi ou dimanche)",
+    "q8_o3":"En ligne / visio (flexible, depuis la maison)",
+    "q8_o4":"Séances individuelles à mon rythme",
+    "qp_t":"Avez-vous déjà participé ou payé pour un accompagnement similaire (atelier, préparation, coaching) ?",
+    "qp_o1":"Non, jamais",
+    "qp_o2":"Oui, gratuitement",
+    "qp_o3":"Oui, de façon payante",
+    "q9_t":"Pour un atelier de 2 h avec une intervenante, quel tarif vous semble juste ?",
+    "q9_o1":"100 à 150 MAD",
+    "q9_o2":"150 à 200 MAD",
+    "q9_o3":"200 à 250 MAD",
+    "q9_o4":"Plus de 250 MAD",
+    "q9_o5":"Je ne souhaite pas payer pour ce type d’atelier",
+    "q10_t":"En une phrase, qu’est-ce qui vous ferait le plus de bien aujourd’hui pour vous sentir soutenue ?",
+    "q10_ph":"Écrivez librement ici...",
+    "q11_t":"Souhaitez-vous rester en contact avec Mommy’s ?",
+    "q11_h":"Choisissez ce qui vous convient :",
+    "submit_btn":"Envoyer mes réponses 🤍",
+    "sending":"Envoi en cours...",
+    "sent_ok":"Vos réponses ont bien été transmises.",
+    "sent_err":"L’envoi automatique n’a pas abouti. Vérifiez votre identifiant Formspree ou votre connexion internet.",
+    "ty_h2":"Merci infiniment pour votre partage ! 🌸",
+    "ty_p1":"Vos réponses sont précieuses et vont nous aider à bâtir un accompagnement doux, concret et adapté aux mamans d’Oujda.",
+    "ty_p2":"Prenez bien soin de vous et de votre bébé ✨",
+    "footer":"Mommy’s · متعة الأمومة — un accompagnement pour les futures et jeunes mamans à Oujda.",
+    "sw":"العربية",
+    "start":"Commencer",
+    "next":"Suivant",
+    "back":"Retour",
+    "step":"Question {n} sur {t}",
+    "opt":"Facultatif",
+    "notify":"Prévenez-moi de la date du prochain atelier",
+    "yes15":"Oui, je veux bien échanger 15 minutes",
+    "name":"Votre prénom",
+    "phone":"Votre numéro de téléphone / WhatsApp",
+    "phone_ph":"Ex : 06 00 00 00 00",
+    "when":"Moments possibles",
+    "wo":["Matin","Après-midi","Soir","En semaine","Week-end"],
+    "lp":"Langue préférée",
+    "lo":["Darija","Français","Les deux"],
+    "c1":"J’accepte que l’équipe Mommy’s متعة الأمومة me contacte selon ce que j’ai coché ci-dessus, sans engagement.",
+    "c2":"J’accepte que l’équipe conserve mon prénom et mon numéro uniquement pour cela, jusqu’au 31 janvier 2027, puis les supprime.",
+    "need":"Cochez les deux cases d’accord pour que vos coordonnées soient enregistrées.",
+    "endHow":"Vos réponses sont envoyées directement à l’équipe via Formspree.",
+    "note":"Seules les réponses cochées ou saisies sont transmises.",
+    "copy":"Copier mes réponses",
+    "copied":"Copié ✓",
+    "again":"Recommencer",
+    "sumT":"Récapitulatif de vos réponses",
+    "gift_t":"5 repères pour souffler",
+    "gift":["Préparez à l’avance ce qui peut l’être : affaires, repas, papiers.","Demandez de l’aide de façon précise (« peux-tu faire telle chose ? »).","Choisissez une seule priorité par jour.","Gardez 10 minutes par jour rien que pour vous.","Parlez de ce que vous ressentez à une personne de confiance."],
+    "gift_n":"Ces repères sont des idées d’organisation, pas des conseils médicaux. En cas de doute sur votre santé ou celle de votre bébé, parlez-en à votre médecin ou à votre sage-femme."
+  },
+  "ar":{
+    "badge":"🌸 Mommy’s تُعدّ مواكبة لأمهات وجدة",
+    "h1":"عيشي أمومتكِ دون أن تنسي نفسكِ",
+    "hero_p":"مواكبة في كل مرحلة، لتتقدمي بثقة ووضوح وطمأنينة.",
+    "pill_1":"⏱️ حوالي 3 إلى 4 دقائق",
+    "pill_2":"🔒 أجوبة سرّية",
+    "pill_3":"🤍 مواكبة غير طبية",
+    "intro_title":"هل أنتِ حامل أو أم بوجدة؟",
+    "intro_text":"أخبرينا بما يساعدكِ حقًا. تُعدّ Mommy’s مواكبة إنسانية وعملية بوجدة (بعيدًا عن المتابعة الطبية).",
+    "hint_2":"اختاري إجابتين (2) كحد أقصى",
+    "hint_3":"اختاري 3 إجابات كحد أقصى",
+    "q1_t":"ما هي وضعيتكِ الحالية؟",
+    "q1_o1":"حامل (الثلث الأول: من 1 إلى 3 أشهر)",
+    "q1_o2":"حامل (الثلث الثاني: من 4 إلى 6 أشهر)",
+    "q1_o3":"حامل (الثلث الثالث: من 7 إلى 9 أشهر)",
+    "q1_o4":"أم لرضيع (أقل من 6 أشهر)",
+    "q1_o5":"أم لطفل صغير (من 6 أشهر إلى سنتين)",
+    "q2_t":"هل هذا هو طفلكِ الأول؟",
+    "q2_o1":"نعم",
+    "q2_o2":"لا",
+    "q3_t":"ما هو وضعكِ المهني الحالي؟",
+    "q3_o1":"أجيرة في القطاع الخاص",
+    "q3_o2":"موظفة في القطاع العام",
+    "q3_o3":"عمل حر / مهنة حرة",
+    "q3_o4":"في عطلة أمومة حاليًا",
+    "q3_o5":"لا أعمل حاليًا",
+    "q4_t":"كيف تشعرين في هذه الفترة؟",
+    "q4_o1":"صعب جدًا",
+    "q4_o2":"صعب نوعًا ما",
+    "q4_o3":"عادي، بين الصعود والهبوط",
+    "q4_o4":"جيد نوعًا ما",
+    "q4_o5":"مطمئنة",
+    "q5_t":"خارج المتابعة الطبية، ما هي أكبر 3 تحديات تواجهينها حاليًا؟",
+    "q5_o1":"تدبير التعب وإيقاع اليوم (الحمل أو الطفل)",
+    "q5_o2":"الاستعداد بهدوء للعودة إلى العمل وتنظيم الأسرة",
+    "q5_o3":"تخفيف العبء الذهني وتنظيم الوقت بشكل أفضل",
+    "q5_o4":"التحكم في التوتر والمشاعر وتخصيص وقت لنفسي",
+    "q5_o5":"تحسين التواصل وإشراك الزوج أو المحيط بشكل مناسب",
+    "q5_o6":"إيجاد معالم عملية ليوميات الطفل (النوم، الروتين)",
+    "q6_t":"هل لديكِ مساحة تتحدثين فيها بحرية عمّا تعيشينه؟",
+    "q6_o1":"نعم، لدي أشخاص ومساحات لذلك",
+    "q6_o2":"قليلًا، لكن ليس بما يكفي",
+    "q6_o3":"نادرًا",
+    "q6_o4":"لا، ليس حقًا",
+    "q7_t":"أي نوع من المواكبة سيساعدكِ أكثر؟",
+    "q7_o1":"مواكبة نفسية وعاطفية (الثقة، التوتر، الإنصات)",
+    "q7_o2":"مواكبة عملية وتنظيمية (استقبال المولود، البيت، العودة للعمل)",
+    "q7_o3":"ورشات تبادل في مجموعات صغيرة للأمهات بوجدة",
+    "q7_o4":"جلسات فردية مخصصة أو ثنائية مع الزوج",
+    "q8_t":"ما هي الصيغة والأوقات الأنسب لكِ؟",
+    "q8_o1":"حضوري بوجدة — خلال الأسبوع (نهاية اليوم أو استراحة)",
+    "q8_o2":"حضوري بوجدة — عطلة نهاية الأسبوع (السبت أو الأحد)",
+    "q8_o3":"عن بُعد / عبر الفيديو (مرونة من المنزل)",
+    "q8_o4":"جلسات فردية حسب إيقاعي",
+    "qp_t":"هل سبق أن شاركتِ أو دفعتِ مقابل مواكبة مشابهة (ورشة، تحضير، تدريب)؟",
+    "qp_o1":"لا، أبدًا",
+    "qp_o2":"نعم، مجانًا",
+    "qp_o3":"نعم، بمقابل",
+    "q9_t":"لورشة مدتها ساعتان مع مؤطّرة، ما الثمن الذي تجدينه مناسبًا؟",
+    "q9_o1":"من 100 إلى 150 درهمًا",
+    "q9_o2":"من 150 إلى 200 درهمًا",
+    "q9_o3":"من 200 إلى 250 درهمًا",
+    "q9_o4":"أكثر من 250 درهمًا",
+    "q9_o5":"لا أرغب في الدفع مقابل هذا النوع من الورشات",
+    "q10_t":"في جملة واحدة، ما أكثر شيء يريحكِ اليوم لتشعري بالدعم؟",
+    "q10_ph":"اكتبي بحرية هنا...",
+    "q11_t":"هل ترغبين في البقاء على تواصل مع Mommy’s؟",
+    "q11_h":"اختاري ما يناسبكِ:",
+    "submit_btn":"إرسال إجاباتي 🤍",
+    "sending":"جارٍ الإرسال...",
+    "sent_ok":"تم إرسال إجاباتكِ بنجاح.",
+    "sent_err":"تعذّر الإرسال التلقائي. تحققي من معرّف Formspree أو الاتصال بالإنترنت.",
+    "ty_h2":"شكرًا جزيلًا لمشاركتكِ! 🌸",
+    "ty_p1":"إجاباتكِ ثمينة وستساعدنا على بناء مواكبة لطيفة، عملية ومناسبة للأمهات في وجدة.",
+    "ty_p2":"اعتني بنفسكِ وبطفلكِ جيدًا ✨",
+    "footer":"Mommy’s · متعة الأمومة — مواكبة للحوامل والأمهات الجدد بوجدة.",
+    "sw":"Français",
+    "start":"ابدئي",
+    "next":"التالي",
+    "back":"رجوع",
+    "step":"السؤال {n} من {t}",
+    "opt":"اختياري",
+    "notify":"أخبروني بموعد الورشة القادمة",
+    "yes15":"نعم، يسعدني إجراء محادثة من 15 دقيقة",
+    "name":"اسمكِ الشخصي",
+    "phone":"رقم هاتفكِ / واتساب",
+    "phone_ph":"مثال: 06 00 00 00 00",
+    "when":"الأوقات المناسبة",
+    "wo":["صباحًا","بعد الظهر","مساءً","أيام الأسبوع","عطلة نهاية الأسبوع"],
+    "lp":"اللغة المفضلة",
+    "lo":["الدارجة","الفرنسية","الاثنتان"],
+    "c1":"أوافق على أن يتواصل معي فريق Mommy’s متعة الأمومة بحسب ما اخترتُه أعلاه، دون أي التزام.",
+    "c2":"أوافق على أن يحتفظ الفريق باسمي ورقم هاتفي لهذا الغرض فقط إلى غاية 31 يناير 2027، ثم يحذفهما.",
+    "need":"ضعي علامة في المربعين ليتم تسجيل بيانات التواصل.",
+    "endHow":"تُرسل إجاباتكِ مباشرة إلى الفريق عبر Formspree.",
+    "note":"يتم إرسال الإجابات التي اخترتِها أو كتبتِها فقط.",
+    "copy":"نسخ أجوبتي",
+    "copied":"تم النسخ ✓",
+    "again":"ابدئي من جديد",
+    "sumT":"ملخص أجوبتكِ",
+    "gift_t":"5 معالم لتلتقطي أنفاسكِ",
+    "gift":["حضّري مسبقًا ما يمكن تحضيره: الأغراض والوجبات والوثائق.","اطلبي المساعدة بشكل محدد (هل يمكنكِ القيام بكذا؟).","اختاري أولوية واحدة كل يوم.","خصّصي 10 دقائق يوميًا لنفسكِ فقط.","تحدثي عمّا تشعرين به مع شخص تثقين به."],
+    "gift_n":"هذه المعالم أفكار للتنظيم وليست نصائح طبية. إن راودكِ شك بخصوص صحتكِ أو صحة طفلكِ، استشيري طبيبكِ أو القابلة."
+  }
+};
+
+const Q=[
+  {id:"Situation actuelle",t:"one",k:"q1",n:5,r:1},
+  {id:"Premier enfant",t:"one",k:"q2",n:2,r:1},
+  {id:"Situation professionnelle",t:"one",k:"q3",n:5,r:1},
+  {id:"Ressenti actuel",t:"one",k:"q4",n:5},
+  {id:"3 plus grands défis",t:"many",max:3,h:"hint_3",k:"q5",n:6},
+  {id:"Espace de parole",t:"one",k:"q6",n:4,r:1},
+  {id:"Type d’accompagnement",t:"many",max:3,h:"hint_3",k:"q7",n:4},
+  {id:"Format et créneaux",t:"many",max:2,h:"hint_2",k:"q8",n:4},
+  {id:"Expérience précédente",t:"one",k:"qp",n:3},
+  {id:"Tarif jugé juste (atelier 2 h)",t:"one",k:"q9",n:5},
+  {id:"Ce qui ferait le plus de bien",t:"text",k:"q10"},
+  {id:"Rester en contact",t:"contact",k:"q11"}
+];
+
+const SRC=(location.hash||"").slice(1).replace(/[^a-z0-9-]/gi,"").slice(0,20);
+
+let lang="fr",step=-1,A={},C={notify:false,talk:false,name:"",phone:"",when:[],lp:null,c1:false,c2:false};
+let sendStatus="idle",sendDetail="";
+
+const $=s=>document.querySelector(s),app=$("#app");
+function h(tag,attrs,...kids){
+  const e=document.createElement(tag);
+  for(const k in(attrs||{})){
+    if(attrs[k]==null)continue;
+    if(k==="class")e.className=attrs[k];
+    else if(k.startsWith("on"))e.addEventListener(k.slice(2),attrs[k]);
+    else e.setAttribute(k,attrs[k]);
+  }
+  for(const c of kids.flat())if(c!=null)e.append(c);
+  return e;
+}
+function opt(text,on,sel,sq){
+  return h("button",{class:"opt",type:"button","aria-pressed":sel?"true":"false",onclick:on},
+    h("span",{class:"dot"+(sq?" sq":"")},sel?"✓":""),
+    h("span",null,text)
+  );
+}
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==="ar"?"rtl":"ltr";
+  $("#lang").textContent=D[l].sw;
+  $("#brand").textContent="Mommy’s  ·  متعة الأمومة";
+  render();
+}
+function go(n){step=n;render();window.scrollTo({top:0,behavior:"smooth"})}
+function chips(list,isSel,onTap,sq){
+  const c=h("div",{class:"chips"});
+  list.forEach((w,i)=>c.append(opt(w,()=>onTap(i),isSel(i),sq)));
+  return c;
+}
+
+function buildSummary(){
+  const f=D.fr;
+  const L=["Questionnaire "+PROJECT+" (langue : "+(lang==="fr"?"français":"arabe")+")"];
+  if(SRC)L.push("Canal : "+SRC);
+  Q.forEach(q=>{
+    if(q.t==="contact")return;
+    let v="—";
+    if(q.t==="text")v=(A[q.id]||"").trim()||"—";
+    else if(q.t==="one"&&A[q.id]!=null)v=f[q.k+"_o"+(A[q.id]+1)];
+    else if(q.t==="many"&&(A[q.id]||[]).length)v=A[q.id].map(i=>f[q.k+"_o"+(i+1)]).join(" ; ");
+    L.push(q.id+" : "+v);
+  });
+  const hasContact=(C.notify||C.talk)&&C.c1&&C.c2;
+  if(hasContact){
+    L.push(
+      "--- Contact ---",
+      "Prévenue du prochain atelier : "+(C.notify?"oui":"non"),
+      "Échange de 15 minutes : "+(C.talk?"oui":"non"),
+      "Prénom : "+(C.name.trim()||"—"),
+      "Téléphone / WhatsApp : "+(C.phone.trim()||"—"),
+      "Moments : "+(C.when.map(i=>f.wo[i]).join(", ")||"—"),
+      "Langue : "+(C.lp!=null?f.lo[C.lp]:"—"),
+      "Accord de contact : oui",
+      "Accord de conservation jusqu’au "+KEEP.fr+" : oui"
+    );
+  }else{
+    L.push("Sans coordonnées de contact");
+  }
+  return L.join("\n");
+}
+
+async function submitToFormspree(){
+  if(sendStatus==="sending"||sendStatus==="sent")return;
+  if(FORMSPREE_ENDPOINT.includes("VOTRE_ID_FORMSPREE")){
+    sendStatus="error";
+    sendDetail="(remplacez VOTRE_ID_FORMSPREE dans le code)";
+    render();
+    return;
+  }
+  sendStatus="sending";
+  sendDetail="";
+  render();
+
+  const hasContact=(C.notify||C.talk)&&C.c1&&C.c2;
+  const payload={
+    langue:lang==="fr"?"français":"arabe",
+    canal:SRC||"direct",
+    prenom:hasContact?(C.name.trim()||"—"):"—",
+    telephone:hasContact?(C.phone.trim()||"—"):"—",
+    resume_complet:buildSummary()
+  };
+
+  try{
+    const res=await fetch(FORMSPREE_ENDPOINT,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+      body:JSON.stringify(payload)
+    });
+    if(res.ok){
+      sendStatus="sent";
+      sendDetail="";
+    }else{
+      sendStatus="error";
+      sendDetail="(HTTP "+res.status+")";
+    }
+  }catch(err){
+    sendStatus="error";
+    sendDetail=err&&err.message?"("+err.message+")":"";
+  }
+  render();
+}
+
+function render(){
+  const u=D[lang];
+  app.replaceChildren();
+  $("#prog").style.width=(step<0?0:Math.round(Math.min(step,Q.length)/Q.length*100))+"%";
+  const card=h("section",{class:"card"});
+  app.append(card);
+
+  if(step<0){
+    card.append(
+      h("p",{class:"badge"},u.badge),
+      h("h1",null,u.h1),
+      h("p",null,u.hero_p),
+      h("div",{class:"pills"},h("span",null,u.pill_1),h("span",null,u.pill_2),h("span",null,u.pill_3)),
+      h("div",{class:"intro"},h("strong",null,u.intro_title),h("br"),u.intro_text),
+      h("div",{class:"row"},h("button",{class:"btn",type:"button",onclick:()=>{sendStatus="idle";sendDetail="";go(0)}},u.start))
+    );
+    return;
+  }
+
+  if(step>=Q.length)return end(card,u);
+
+  const q=Q[step];
+  card.append(h("p",{class:"mut"},u.step.replace("{n}",step+1).replace("{t}",Q.length)),h("h2",null,u[q.k+"_t"]));
+  if(q.h)card.append(h("p",{class:"mut"},u[q.h]));
+  else if(!q.r&&q.t!=="contact")card.append(h("p",{class:"mut"},u.opt));
+
+  if(q.t==="text"){
+    const ta=h("textarea",{placeholder:u.q10_ph,"aria-label":u.q10_t,maxlength:"400"});
+    ta.value=A[q.id]||"";
+    ta.addEventListener("input",()=>A[q.id]=ta.value);
+    card.append(ta);
+  }else if(q.t==="contact"){
+    card.append(
+      h("p",{class:"mut"},u.q11_h),
+      opt(u.notify,()=>{C.notify=!C.notify;render()},C.notify,true),
+      opt(u.yes15,()=>{C.talk=!C.talk;render()},C.talk,true)
+    );
+    if(C.notify||C.talk){
+      const box=h("div",{class:"box"});
+      const ni=h("input",{type:"text",maxlength:"40","aria-label":u.name,placeholder:u.name});
+      ni.value=C.name;
+      ni.addEventListener("input",()=>C.name=ni.value);
+
+      const pi=h("input",{type:"tel",maxlength:"30","aria-label":u.phone,placeholder:u.phone_ph});
+      pi.value=C.phone;
+      pi.addEventListener("input",()=>C.phone=pi.value);
+
+      box.append(
+        h("label",{class:"lab"},u.name),
+        ni,
+        h("label",{class:"lab"},u.phone),
+        pi,
+        h("label",{class:"lab"},u.when),
+        chips(u.wo,i=>C.when.includes(i),i=>{C.when=C.when.includes(i)?C.when.filter(x=>x!==i):[...C.when,i];render()},1),
+        h("label",{class:"lab"},u.lp),
+        chips(u.lo,i=>C.lp===i,i=>{C.lp=i;render()}),
+        opt(u.c1,()=>{C.c1=!C.c1;render()},C.c1,true),
+        opt(u.c2,()=>{C.c2=!C.c2;render()},C.c2,true)
+      );
+      if(!(C.c1&&C.c2))box.append(h("p",{class:"warn"},u.need));
+      card.append(box);
+    }
+  }else{
+    for(let i=0;i<q.n;i++){
+      const sel=q.t==="one"?A[q.id]===i:(A[q.id]||[]).includes(i);
+      card.append(opt(u[q.k+"_o"+(i+1)],()=>{
+        if(q.t==="one"){
+          A[q.id]=i;
+          render();
+          setTimeout(()=>{if(step===Q.indexOf(q))go(step+1)},240);
+        }else{
+          let a=A[q.id]||[];
+          a=a.includes(i)?a.filter(x=>x!==i):[...a,i].slice(-q.max);
+          A[q.id]=a;
+          render();
+        }
+      },sel,q.t==="many"));
+    }
+  }
+
+  const ok=!q.r||A[q.id]!=null;
+  const isLast=step===Q.length-1;
+  const nextBtn=isLast
+    ?h("button",{class:"btn",type:"button",disabled:sendStatus==="sending"?"":null,onclick:async()=>{go(step+1);await submitToFormspree()}},u.submit_btn)
+    :h("button",{class:"btn",type:"button",disabled:ok?null:"",onclick:()=>go(step+1)},u.next);
+
+  card.append(
+    h("div",{class:"row"},
+      h("button",{class:"btn ghost",type:"button",onclick:()=>{sendStatus="idle";sendDetail="";go(step-1)}},u.back),
+      nextBtn
+    )
+  );
+}
+
+function end(card,u){
+  const summaryText=buildSummary();
+  card.append(h("h1",null,u.ty_h2),h("p",null,u.ty_p1),h("p",null,u.endHow));
+
+  if(sendStatus==="sending")card.append(h("p",{class:"mut"},u.sending));
+  else if(sendStatus==="sent")card.append(h("p",{class:"ok"},u.sent_ok));
+  else if(sendStatus==="error")card.append(h("p",{class:"warn"},u.sent_err+(sendDetail?" "+sendDetail:"")));
+
+  const s=h("div",{class:"sum"});
+  s.textContent=summaryText;
+
+  const cp=h("button",{class:"btn ghost",type:"button",onclick:async()=>{
+    try{await navigator.clipboard.writeText(summaryText)}
+    catch(_){
+      const t=h("textarea");
+      t.value=summaryText;
+      document.body.append(t);
+      t.select();
+      try{document.execCommand("copy")}catch(__){}
+      t.remove();
+    }
+    cp.textContent=u.copied;
+  }},u.copy);
+
+  const actionRow=h("div",{class:"row"});
+  if(sendStatus==="error"){
+    actionRow.append(h("button",{class:"btn",type:"button",onclick:()=>{sendStatus="idle";submitToFormspree()}},u.submit_btn));
+  }
+  actionRow.append(cp);
+
+  card.append(
+    h("p",{class:"mut"},u.sumT),
+    s,
+    h("p",{class:"mut"},u.note),
+    actionRow,
+    h("div",{class:"row"},
+      h("button",{class:"btn ghost",type:"button",onclick:()=>{sendStatus="idle";sendDetail="";go(Q.length-1)}},u.back),
+      h("button",{class:"btn ghost",type:"button",onclick:()=>{
+        A={};
+        C={notify:false,talk:false,name:"",phone:"",when:[],lp:null,c1:false,c2:false};
+        sendStatus="idle";
+        sendDetail="";
+        go(-1);
+      }},u.again)
+    ),
+    h("div",{class:"box"},h("strong",null,u.gift_t),h("ul",null,...u.gift.map(x=>h("li",null,x))),h("p",{class:"mut"},u.gift_n)),
+    h("p",{class:"mut"},u.ty_p2),
+    h("p",{class:"mut"},u.footer)
+  );
+}
+
+$("#lang").addEventListener("click",()=>setLang(lang==="fr"?"ar":"fr"));
+setLang("fr");
+</script>
+</body>
+</html>
+```[cite: 1]
+
+### Ce qui a été ajusté dans ce fichier :
+* Suppression du formulaire caché `#nf-form` et de `submitToNetlify()`[cite: 1].
+* Ajout de `FORMSPREE_ENDPOINT` et de `submitToFormspree()` qui envoie `langue`, `canal`, `prenom`, `telephone` et `resume_complet` en JSON[cite: 1].
+* Mise à jour des messages d’état et de confirmation en français et en arabe[cite: 1].
+
+Voulez-vous maintenant de l’aide pour héberger ce fichier en ligne (par exemple sur **GitHub Pages** ou **Cloudflare Pages**) afin d’obtenir le lien à partager sur WhatsApp ?
